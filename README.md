@@ -1,6 +1,6 @@
 # Spacenav
 
-**TODO: Add description**
+NIF wrapper for the [spacenav-plus](https://crates.io/crates/spacenav-plus) crate.
 
 ## Installation
 
@@ -10,7 +10,7 @@ by adding `spacenav` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:spacenav, "~> 0.1.0"}
+    {:spacenav, "~> 0.0.1"}
   ]
 end
 ```

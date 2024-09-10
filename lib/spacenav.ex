@@ -1,18 +1,14 @@
 defmodule Spacenav do
-  @moduledoc """
-  Documentation for `Spacenav`.
-  """
+  use Rustler, otp_app: :spacenav, crate: "spacenav"
 
-  @doc """
-  Hello world.
+  def listen(pid), do: :erlang.nif_error(:nif_not_loaded)
+  def listen, do: listen(self())
+end
 
-  ## Examples
+defmodule Spacenav.ButtonEvent do
+  defstruct [:bnum, :press]
+end
 
-      iex> Spacenav.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+defmodule Spacenav.MotionEvent do
+  defstruct [:x, :y, :z, :rx, :ry, :rz, :period]
 end
